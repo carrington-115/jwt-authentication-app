@@ -1,6 +1,5 @@
 import { config } from "dotenv";
 import express from "express";
-import jwt from "jsonwebtoken";
 import { authorisationToken } from "./middleware.js";
 config({ path: "./.env" });
 

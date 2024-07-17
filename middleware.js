@@ -5,7 +5,6 @@ dotenv.config();
 const authorisationToken = (req, res, next) => {
   const tokenHeader = req.headers["authorization"];
   const authToken = tokenHeader && tokenHeader.split(" ")[1];
-  console.log(authToken);
   if (authToken === null) {
     return res.sendStatus(401);
   }

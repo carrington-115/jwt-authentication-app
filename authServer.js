@@ -16,7 +16,7 @@ app.post("/login", (req, res) => {
 });
 
 const generateAccessToken = (user) => {
-  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "20s" });
+  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "1m" });
 };
 
 app.listen(process.env.AUTH_SERVER_PORT, () => {
